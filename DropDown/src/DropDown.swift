@@ -919,7 +919,7 @@ extension DropDown {
 	public func selectRow(at index: Index?) {
 		if let index = index {
             tableView.selectRow(
-                at: IndexPath(row: index, section: 0), animated: true, scrollPosition: .none
+                at: IndexPath(row: index, section: 0), animated: false, scrollPosition: .middle
             )
             selectedRowIndices.insert(index)
 		} else {
