@@ -12,6 +12,7 @@ open class DropDownCell: UITableViewCell {
 		
 	//UI
 	@IBOutlet open weak var optionLabel: UILabel!
+    @IBOutlet open weak var buttonItems: UIStackView!
 	
 	var selectedBackgroundColor: UIColor?
 
