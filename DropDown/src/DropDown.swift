@@ -721,23 +721,30 @@ extension DropDown {
 	}
 	
 	fileprivate func fittingWidth() -> CGFloat {
-		if templateCell == nil {
-			templateCell = cellNib.instantiate(withOwner: nil, options: nil)[0] as! DropDownCell
-		}
-		
-		var maxWidth: CGFloat = 0
-		
-		for index in 0..<dataSource.count {
-			configureCell(templateCell, at: index)
-			templateCell.bounds.size.height = cellHeight
-			let width = templateCell.systemLayoutSizeFitting(UILayoutFittingCompressedSize).width
-			
-			if width > maxWidth {
-				maxWidth = width
-			}
-		}
-		
-		return maxWidth
+        if templateCell == nil {
+            templateCell = cellNib.instantiate(withOwner: nil, options: nil)[0] as! DropDownCell
+        }
+        guard let anchorView = self.anchorView else { return 0 }
+        let width: CGFloat = (anchorView.plainView.frame.width)
+        return width
+        
+//        if templateCell == nil {
+//            templateCell = cellNib.instantiate(withOwner: nil, options: nil)[0] as! DropDownCell
+//        }
+//
+//        var maxWidth: CGFloat = 0
+//
+//        for index in 0..<dataSource.count {
+//            configureCell(templateCell, at: index)
+//            templateCell.bounds.size.height = cellHeight
+//            let width = templateCell.systemLayoutSizeFitting(UILayoutFittingCompressedSize).width
+//
+//            if width > maxWidth {
+//                maxWidth = width
+//            }
+//        }
+//
+//        return maxWidth
 	}
 	
 	fileprivate func constraintWidthToBoundsIfNecessary(layout: inout ComputeLayoutTuple, in window: UIWindow) {
