@@ -13,6 +13,8 @@ open class DropDownCell: UITableViewCell {
 	//UI
 	@IBOutlet open weak var optionLabel: UILabel!
     @IBOutlet open weak var buttonItems: UIStackView!
+    @IBOutlet open weak var topSeparatorLine: UILabel!
+    @IBOutlet open weak var bottomSeparatorLine: UILabel!
 	
 	var selectedBackgroundColor: UIColor?
 
@@ -24,7 +26,8 @@ extension DropDownCell {
 	
 	override open func awakeFromNib() {
 		super.awakeFromNib()
-		
+        topSeparatorLine.isHidden = true // As default
+        bottomSeparatorLine.isHidden = true // As default
 		backgroundColor = .clear
 	}
 	

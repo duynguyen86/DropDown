@@ -15,31 +15,59 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhL-pA-i6q">
-                    <rect key="frame" x="8" y="8" width="42" height="28"/>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y69-KA-S0n">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                    <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="5mp-J8-Lyp"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ec9-eP-Qn9">
+                    <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="UVc-zx-j6v"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhL-pA-i6q">
+                    <rect key="frame" x="8" y="8" width="37" height="28"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="MkW-bV-psW">
-                    <rect key="frame" x="58" y="0.0" width="262" height="44"/>
+                    <rect key="frame" x="53" y="0.0" width="267" height="44"/>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Ec9-eP-Qn9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DhC-5e-gfr"/>
                 <constraint firstAttribute="bottom" secondItem="MkW-bV-psW" secondAttribute="bottom" id="Fa7-wb-2t2"/>
                 <constraint firstItem="dhL-pA-i6q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="QIg-6Z-lbJ"/>
                 <constraint firstAttribute="trailing" secondItem="MkW-bV-psW" secondAttribute="trailing" id="RQD-P0-spS"/>
+                <constraint firstAttribute="bottom" secondItem="Ec9-eP-Qn9" secondAttribute="bottom" id="ckX-Ed-wei"/>
                 <constraint firstItem="MkW-bV-psW" firstAttribute="leading" secondItem="dhL-pA-i6q" secondAttribute="trailing" constant="8" id="hyh-Dj-Qks"/>
+                <constraint firstAttribute="trailing" secondItem="Ec9-eP-Qn9" secondAttribute="trailing" id="iYs-vm-NX2"/>
                 <constraint firstItem="MkW-bV-psW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jec-1N-77u"/>
+                <constraint firstAttribute="trailing" secondItem="Y69-KA-S0n" secondAttribute="trailing" id="olD-7d-pqP"/>
+                <constraint firstItem="Y69-KA-S0n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qfm-Pk-qJT"/>
                 <constraint firstItem="dhL-pA-i6q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="qo1-5r-HsS"/>
                 <constraint firstAttribute="bottom" secondItem="dhL-pA-i6q" secondAttribute="bottom" constant="8" id="wRT-h8-gtn"/>
+                <constraint firstItem="Y69-KA-S0n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xID-IC-ZvY"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="bottomSeparatorLine" destination="Ec9-eP-Qn9" id="tKy-fm-vyf"/>
                 <outlet property="buttonItems" destination="MkW-bV-psW" id="4Gq-Ol-fEj"/>
                 <outlet property="optionLabel" destination="dhL-pA-i6q" id="1GT-db-EaA"/>
+                <outlet property="topSeparatorLine" destination="Y69-KA-S0n" id="PWk-dx-8pS"/>
             </connections>
             <point key="canvasLocation" x="33.600000000000001" y="53.973013493253376"/>
         </view>
