@@ -15,7 +15,8 @@ open class DropDownCell: UITableViewCell {
     @IBOutlet open weak var buttonItems: UIStackView!
     @IBOutlet open weak var topSeparatorLine: UILabel!
     @IBOutlet open weak var bottomSeparatorLine: UILabel!
-	
+    @IBOutlet weak var min_buttonItemsWidth: NSLayoutConstraint!
+    
 	var selectedBackgroundColor: UIColor?
 
 }

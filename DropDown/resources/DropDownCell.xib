@@ -35,14 +35,17 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhL-pA-i6q">
-                    <rect key="frame" x="8" y="8" width="37" height="28"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhL-pA-i6q">
+                    <rect key="frame" x="8" y="8" width="41" height="28"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="MkW-bV-psW">
-                    <rect key="frame" x="53" y="0.0" width="267" height="44"/>
+                    <rect key="frame" x="57" y="0.0" width="263" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" id="reh-x9-XiB"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,6 +69,7 @@
             <connections>
                 <outlet property="bottomSeparatorLine" destination="Ec9-eP-Qn9" id="tKy-fm-vyf"/>
                 <outlet property="buttonItems" destination="MkW-bV-psW" id="4Gq-Ol-fEj"/>
+                <outlet property="min_buttonItemsWidth" destination="reh-x9-XiB" id="NZK-sx-hoU"/>
                 <outlet property="optionLabel" destination="dhL-pA-i6q" id="1GT-db-EaA"/>
                 <outlet property="topSeparatorLine" destination="Y69-KA-S0n" id="PWk-dx-8pS"/>
             </connections>
