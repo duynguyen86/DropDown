@@ -151,6 +151,13 @@ public final class DropDown: UIView {
 	public var width: CGFloat? {
 		didSet { setNeedsUpdateConstraints() }
 	}
+    
+    /**
+     The height of the drop down.
+     */
+    public var dropDownHeight: CGFloat = 0.0 {
+        didSet { setNeedsUpdateConstraints() }
+    }
 
 	/**
 	arrowIndication.x
